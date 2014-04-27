@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <!-- Page Specific CSS -->
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/form.js"></script>
   </head>
 
   <body>
@@ -101,81 +103,314 @@
 
       <div id="page-wrapper">
         <form class="form-horizontal">
-<fieldset>
+            <fieldset>
+            <!-- Form Name -->
+            <legend>Roommate Lifestyle Survey</legend>
+            <!-- <hr class="divider"> -->
+            <!-- Multiple Radios (inline) -->
+                          <div class="form-group">
+                            <label>Please mark the noise level that you can bear the most</label>
+                            <p>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 1 very quiet
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 2
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 3
+                              </label>
+                               <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 4
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 5
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 6
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 7
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 8
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 9
+                              </label>
+                                <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 10 very noisy
+                            </p>
+                            </label>
+                            <hr class="divider">
+                            <!-- end q1 -->
+                          </div>
+                          <div class="form-group">
+                            <label>How noisy are you?</label>
+                            <p>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 1 very quiet
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 2
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 3
+                              </label>
+                               <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 4
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 5
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 6
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 7
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 8
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 9
+                              </label>
+                                <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 10 very noisy
+                              </label>
+                          </p>
+                          </div>
+                          <hr class="divider">
+                          <!-- end q2 -->
+                          <h5>Which of the following describe you well?</h5>
+                          <div class="form-group">
+                            <div class="control-group">
+                              <label class="control-label" for="selectbasic">Rising Time</label>
+                                <div class="controls">
+                                  <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                                      <option>Get up very early</option>
+                                      <option>Get up early</option>
+                                      <option>Get up late</option>
+                                      <option>Get up very late</option>
+                                  </select>
+                              </div>
+                            </div>
+                              <div class="control-group">
+                              <label class="control-label" for="selectbasic">Napping Time</label>
+                                <div class="controls">
+                                  <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                                      <option>I take a nap in the afternoon</option>
+                                      <option>I do not take a nap in the afternoon</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label" for="selectbasic">Sleeping Time</label>
+                                <div class="controls">
+                                  <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                                      <option>Go to bed very early</option>
+                                      <option>Go to bed early</option>
+                                      <option>Go to bed late</option>
+                                      <option>Go to bed very late</option>                                 
+                                  </select>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="divider">
+                          <!-- end q3 -->
+                          <h5>Choose from the following in each group, to describe the preferences you would like your roommate to have</h5>
+                          <div class="form-group">
+                            <div class="control-group">
+                              <label class="control-label" for="selectbasic">Rising Time</label>
+                                <div class="controls">
+                                  <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                                      <option>Get up very early</option>
+                                      <option>Get up early</option>
+                                      <option>Get up late</option>
+                                      <option>Get up very late</option>
+                                      <option>I don't care</option>
+                                  </select>
+                              </div>
+                            </div>
+                              <div class="control-group">
+                              <label class="control-label" for="selectbasic">Napping Time</label>
+                                <div class="controls">
+                                  <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                                      <option>I take a nap in the afternoon</option>
+                                      <option>I do not take a nap in the afternoon</option>
+                                      <option>I don't care </option>
+                                  </select>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                              <label class="control-label" for="selectbasic">Sleeping Time</label>
+                                <div class="controls">
+                                  <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                                      <option>Go to bed very early</option>
+                                      <option>Go to bed early</option>
+                                      <option>Go to bed late</option>
+                                      <option>Go to bed very late</option>
+                                      <option> I don't care<option>                                 
+                                  </select>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="divider">
+                          <!-- end q4 -->
+                          <div class="form-group">
+                            <label>How often do you do your chores?</label>
+                            <p>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 1 hardly ever
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 2
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 3
+                              </label>
+                               <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 4
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 5
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 6
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 7
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 8
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 9
+                              </label>
+                                <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 10 very often
+                              </label>
+                          </p>
+                          </div>
+                          <hr class="divider">
+                          <!-- end q5 -->
+                          <div class="form-group">
+                            <label>How often do you expect your roommate to do their chores?</label>
+                            <p>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 1 hardly ever
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 2
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 3
+                              </label>
+                               <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 4
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 5
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 6
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 7
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 8
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 9
+                              </label>
+                                <label class="radio-inline">
+                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 10 very often
+                              </label>
+                          </p>
+                          </div>
+                          <hr class="divider">
+                          <!-- end q6 -->
+                          <div class="control-group">
+                            <label class="control-label" for="radios">Do you smoke?</label>
+                              <div class="controls">
+                                <label class="radio" for="radios-0">
+                                    <input type="radio" name="radios" id="radios-0" value="Option one" checked="checked">
+                                    Yes
+                                  </label>
+                                <label class="radio" for="radios-1">
+                                <input type="radio" name="radios" id="radios-1" value="Option two">
+                                  No
+                                </label>
+                            </div>
+                          </div>
+                          <hr class="divider">
+                          <! -- end q7 -->
+                          <div class="control-group">
+                            <label class="control-label" for="radios">Do you want a roommate who smokes?</label>
+                              <div class="controls">
+                                <label class="radio" for="radios-0">
+                                    <input type="radio" name="radios" id="radios-0" value="Option one" checked="checked">
+                                    Yes
+                                  </label>
+                                <label class="radio" for="radios-1">
+                                <input type="radio" name="radios" id="radios-1" value="Option two">
+                                  No
+                                </label>
+                            </div>
+                          </div>
+                          <hr class="divider">
+                          <! -- end q8 -->
+                            <div class="control-group">
+                            <label class="control-label" for="radios">Do you mind your roommate's relationship status?</label>
+                              <div class="controls">
+                                <label class="radio" for="roommateRelationRadioYes">
+                                    <input type="radio" name="radios" id="roommateRelationRadioYes" value="Option one">
+                                    Yes
+                                  </label>
+                                <label class="radio" for="roommateRelationRadioNo">
+                                <input type="radio" name="radios" id="roommateRelationRadioNo" value="Option two" checked="checked">
+                                  No
+                                </label>
+                            </div>
+                          </div>
+                          <hr class="divider">
+                          <! -- end q8 -->
+                          <div class="form-group" id="relationStatus">
+                              <div class="control-group">
+                              <label class="control-label" for="selectbasic">What is your relationship status?</label>
+                                <div class="controls">
+                                  <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                                      <option>No relationship</option>
+                                      <option>In a moderatley serious relationship</option>
+                                      <option>In a serious relationship</option>
+                                  </select>
+                              </div>
+                            </div>
+                              <div class="control-group">
+                              <label class="control-label" for="selectbasic">What kind of relationship status would you like your roommate to have?</label>
+                                <div class="controls">
+                                  <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                                      <option>No relationship</option>
+                                      <option>In a moderatley serious relationship</option>
+                                      <option>In a serious relationship</option>
+                                  </select>
+                              </div>
+                            </div>
+                          </div>
 
-<!-- Form Name -->
-<legend>Test Form</legend>
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="Name">Name</label>
-  <div class="controls">
-    <input id="Name" name="Name" type="text" placeholder="Enter Your Nane" class="input-xlarge">
-    
-  </div>
-</div>
-<hr class="divider">
-<!-- Multiple Radios -->
-<div class="control-group">
-  <label class="control-label" for="radios">Is this cool?</label>
-  <div class="controls">
-    <label class="radio" for="radios-0">
-      <input type="radio" name="radios" id="radios-0" value="Yes" checked="checked">
-      Yes
-    </label>
-    <label class="radio" for="radios-1">
-      <input type="radio" name="radios" id="radios-1" value="No">
-      No
-    </label>
-  </div>
-</div>
-<hr class="divider">
-<!-- Multiple Radios (inline) -->
-              <div class="form-group">
-                <label>How awesome is Kyle</label>
-                <label class="radio-inline">
-                  <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 1
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 2
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 3
-                </label>
-                                <label class="radio-inline">
-                  <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 4
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 5
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 6
-                </label>
-                                <label class="radio-inline">
-                  <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 7
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2"> 8
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3"> 9
-                </label>
-                                <label class="radio-inline">
-                  <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked> 10
-                </label>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="singlebutton">Submit</label>
+              <div class="controls">
+                <button id="singlebutton" name="singlebutton" class="btn btn-primary">Send</button>
               </div>
-              <hr class="divider">
+            </div>
 
-<!-- Button -->
-<div class="control-group">
-  <label class="control-label" for="singlebutton">Submit</label>
-  <div class="controls">
-    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Send</button>
-  </div>
-</div>
-
-</fieldset>
-</form>
+            </fieldset>
+            </form>
 
       </div><!-- /#page-wrapper -->
 
